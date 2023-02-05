@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   post 'books' => 'books#create'
   
-  get 'show' => 'books#show'
+  get 'books/:id' => 'books#show', as: 'book'
   
   
 end
