@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top,
+.index {
+   font-family: 'Verdana', sans-serif;
+}
+
+.top-title {
+  line-height: 100px;
+  text-indent: 2em;
+}
+
+.top-body {
+  line-height: 25px;
+  text-indent: 4em;
+}
