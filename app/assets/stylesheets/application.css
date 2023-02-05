@@ -24,12 +24,15 @@
    font-family: 'Verdana', sans-serif;
 }
 
-.top-title {
-  line-height: 100px;
-  text-indent: 2em;
+.top-title,
+.index {
+  padding: 30px 0 0 30px;
 }
 
 .top-body {
-  line-height: 25px;
-  text-indent: 4em;
+  padding: 20px 0 0 70px;
+}
+
+.index-form  {
+  margin: 20px 0 10px 0;
 }

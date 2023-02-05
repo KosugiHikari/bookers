@@ -1,28 +1,33 @@
 <div class="index">
 
-  <h1>Books</h1>
+  <div class="index-title">
+    <h1>Books</h1>
+  </div>
+   <div class="index-body">
+      <% @books.each do |book| %>
 
-  <% @books.each do |book| %>
+        <p>Title</p>
+        <%= book.title %>
+        <p>Body</p>
+        <%= book.body %>
+        <br>
+        <%= link_to "Show", book_path(book.id) %>
+        <%= link_to "Edit", edit_book_path(book.id) %>
 
-    <p>Title</p>
-    <%= book.title %>
-    <p>Body</p>
-    <%= book.body %>
-    <br>
-    <%= link_to "Show", book_path(book.id) %>
+      <% end %>
+    </div>
+    
+    <div class="index-form">
+      <h2>New book</h2>
+      <%= form_with model: @book do |f| %>
+        <p>Title</p>
+        <%= f.text_field :title %>
 
-  <% end %>
-
-
-  <h2>New book</h2>
-  <%= form_with model: @book do |f| %>
-    <p>Title</p>
-    <%= f.text_field :title %>
-
-    <p>Body</p>
-    <%= f.text_area :body %>
-    <br>
-    <%= f.submit 'Create Book' %>
-  <% end %>
+        <p>Body</p>
+        <%= f.text_area :body %>
+        <br>
+        <%= f.submit 'Create Book' %>
+      <% end %>
+    </div>
 
 </div>
