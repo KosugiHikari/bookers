@@ -20,19 +20,71 @@
 }
 
 .top,
-.index {
+.index,
+.show,
+.edit {
    font-family: 'Verdana', sans-serif;
 }
 
-.top-title,
-.index {
-  padding: 30px 0 0 30px;
+.top,
+.index,
+.show,
+.edit {
+  margin-top: 20px;
+  margin-left: 40px;
 }
 
+
 .top-body {
-  padding: 20px 0 0 70px;
+  padding: 20px 0 0 40px;
+}
+
+
+.index-title h1 {
+  padding-bottom: 15px;
+}
+
+.index-list {
+  display: flex;
 }
 
 .index-form  {
-  margin: 20px 0 10px 0;
+  padding: 20px 0 10px 0;
+}
+
+.index-form h2 {
+  padding-bottom: 15px;
+}
+
+.form-title,
+.form-body,
+.form-button {
+  padding-bottom: 10px;
+}
+
+.show-body {
+  margin: 40px 0 0 40px;
+}
+
+.show-body p {
+  padding-bottom: 50px;
+}
+
+.show-menu p {
+  display: inline-block;
+}
+
+
+.edit h1 {
+  padding-bottom: 20px;
+}
+
+.edit-title,
+.edit-body,
+.edit-button {
+  padding-bottom: 10px;
+}
+
+.edit-menu p {
+  display: inline;
 }

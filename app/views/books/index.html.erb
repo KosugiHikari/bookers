@@ -4,29 +4,45 @@
     <h1>Books</h1>
   </div>
    <div class="index-body">
+     
+    <div class="index-list">
       <% @books.each do |book| %>
-
-        <p>Title</p>
         <%= book.title %>
-        <p>Body</p>
         <%= book.body %>
-        <br>
         <%= link_to "Show", book_path(book.id) %>
         <%= link_to "Edit", edit_book_path(book.id) %>
-
+        <%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
       <% end %>
     </div>
+  </div>
     
     <div class="index-form">
       <h2>New book</h2>
+      
+      <% if @book.errors.any? %>
+        <%= @book.errors.count %>errors prohibited this book from being saved:
+        <ul>
+          <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+      
       <%= form_with model: @book do |f| %>
-        <p>Title</p>
-        <%= f.text_field :title %>
 
-        <p>Body</p>
-        <%= f.text_area :body %>
-        <br>
-        <%= f.submit 'Create Book' %>
+        <div class="form-title">
+          <p>Title</p>
+          <%= f.text_field :title %>
+        </div>
+
+        <div class="form-body">
+          <p>Body</p>
+          <%= f.text_area :body %><br>
+        </div>
+        <div class="form-botton">
+          <%= f.submit 'Create Book' %>
+        </div>
+        
       <% end %>
     </div>
 
