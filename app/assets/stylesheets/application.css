@@ -40,7 +40,6 @@
   padding: 20px 0 0 40px;
 }
 
-
 .index-flash {
   color: green;
   margin: 30px 50px;
@@ -50,12 +49,24 @@
   padding-bottom: 15px;
 }
 
-.index-errors {
+.index-error {
+  margin: 20px 0;
+  width: 450px;
+}
+
+.index-error strong {
+  display: block;
+  width: 450px;
+  color: #fff;
+  background-color: red;
   padding: 10px;
 }
 
-.index-errors li {
-  margin-left: 50px;
+.index-error-m {
+  width: 450px;
+  padding: 30px 60px;
+  border: solid 2px red;
+  background-color: #f0f0f0;
 }
 
 .index-form  {
@@ -88,8 +99,24 @@
 }
 
 
-.edit h1 {
-  padding-bottom: 20px;
+.edit-error {
+  margin: 20px 0;
+  width: 450px;
+}
+
+.edit-error strong {
+  display: block;
+  width: 450px;
+  color: #fff;
+  background-color: red;
+  padding: 10px;
+}
+
+.edit-error-m {
+  width: 450px;
+  padding: 30px 60px;
+  border: solid 2px red;
+  background-color: #f0f0f0;
 }
 
 .edit-title,

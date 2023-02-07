@@ -30,14 +30,16 @@
     <div class="index-form">
       <h2>New book</h2>
       
-      <div class="index-errors">
+      <div class="index-error">
         <% if @book.errors.any? %>
-          <%= @book.errors.count %>errors prohibited this book from being saved:
-          <ul>
-            <% @book.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
+          <strong><%= @book.errors.count %>errors prohibited this book from being saved:</strong>
+            <div class="index-error-m">
+              <ul>
+                <% @book.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
       <% end %>
       </div>
       

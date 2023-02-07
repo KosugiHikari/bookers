@@ -1,14 +1,18 @@
 <div class="edit">
     <h1>Editing Book</h1>
     
-    <% if @book.errors.any? %>
-        <%= @book.errors.count %>error prohibited this book from being saved:
-        <ul>
-            <% @book.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-            <% end %>
-        </ul>
-    <% end %>
+    <div class="edit-error">
+        <% if @book.errors.any? %>
+            <strong><%= @book.errors.count %>error prohibited this book from being saved:</strong>
+                <div class="edit-error-m">
+                    <ul>
+                    <% @book.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                    <% end %>
+                    </ul>
+                </div>
+        <% end %>
+    </div>
     
     <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
         <div class="edit-title">
