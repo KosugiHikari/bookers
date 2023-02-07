@@ -40,26 +40,38 @@
 }
 
 
+.index-flash {
+  color: green;
+  margin: 30px 50px;
+}
+
 .index-title h1 {
   padding-bottom: 15px;
 }
 
-.index-list {
-  display: flex;
+.index-errors {
+  padding: 10px;
+}
+
+.index-errors li {
+  margin-left: 50px;
 }
 
 .index-form  {
   padding: 20px 0 10px 0;
 }
 
-.index-form h2 {
-  padding-bottom: 15px;
-}
-
 .form-title,
 .form-body,
 .form-button {
   padding-bottom: 10px;
+}
+
+
+.show-flash {
+  color: green;
+  margin-left: 40px;
+  padding-top: 20px;
 }
 
 .show-body {
